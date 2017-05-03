@@ -1,8 +1,9 @@
 
-public class BikeRace {
+class BikeRace {
 	int kilometers = 150;
 	int teams = 0;
-	int maxTeams = 2;
+	private final int maxTeams = 3;
+
 	
 	// constructors
 	BikeRace() {		
@@ -13,14 +14,14 @@ public class BikeRace {
 	}
 	
 	// Methods
-	public void add1Team() {
+
+		void add1Team () {
 		if (teams < maxTeams)
 			teams++;
 		else
 			handleTooMany();
-	}
-	
+	    }
 	private void handleTooMany() {
-		System.out.println("Te veel Teams");
+			    System.out.println("Te veel Teams");
 	}
 }
