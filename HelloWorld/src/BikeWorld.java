@@ -1,5 +1,5 @@
 
-public class BikeWorld {
+class BikeWorld {
 
 	private static int hashGoldRace;
 
@@ -7,8 +7,8 @@ public class BikeWorld {
 		// Declarations (kan overal, hoeft niet bovenin....
 		BikeRace goldRace; 
 		BikeRace vlaanderen;
-		Team lotto;
-		Team lottoBelgie;
+		ProfTeam lottoNL;
+		ProfTeam lottoBelgie;
 		int lengteVlaanderen = 230;
 		StringBuilder sb = new StringBuilder(50);
 		
@@ -19,6 +19,7 @@ public class BikeWorld {
 		int numberInTeam;
 		
 		goldRace = new BikeRace();
+
 		System.out.println("zonder parameter");	
 		System.out.println(goldRace.kilometers);
 
@@ -30,24 +31,27 @@ public class BikeWorld {
 		vlaanderen.add1Team();
 		vlaanderen.add1Team();
 		vlaanderen.add1Team();
-		System.out.print("Teams Ronde van Vlaanderen: ");
+		System.out.print("Teams Ronde van Vlaanderen dit jaar: ");
 		System.out.println(vlaanderen.teams);
 		
 		goldRace.add1Team();
 		System.out.print("Teams Amstel Gold Race: ");
 		System.out.println(goldRace.teams);
 		
-		lotto = new Team(nameLotto);
-		System.out.println(lotto.getName());
+		lottoNL = new ProfTeam(nameLotto);
+		System.out.println(lottoNL.getSponsorName());
 		
 		numberInTeam = 15;
-		lottoBelgie = new Team(nameLottoBelgie, numberInTeam, teamLeaderLottoBelgie );
-		System.out.println(lottoBelgie.getName());
-		System.out.println(lottoBelgie.getNumberOfCyclists());
+		lottoBelgie = new ProfTeam(nameLottoBelgie, numberInTeam, teamLeaderLottoBelgie);
+		System.out.println(lottoBelgie.getSponsorName());
+		System.out.println(lottoBelgie.getNumberInTeam());
 		System.out.println(lottoBelgie.getTeamLeader());
 		
 		sb = sb.append("Teams: ");
-		sb = sb.append(nameLotto + " " + nameLottoBelgie);
+		sb = sb.append(lottoNL.getSponsorName());
+		sb = sb.append(" ");
+		sb = sb.append(lottoBelgie.getSponsorName());
+
 		System.out.println(sb);
 		hashGoldRace = goldRace.hashCode();
 		System.out.println("hashGoldRace: " + hashGoldRace);
