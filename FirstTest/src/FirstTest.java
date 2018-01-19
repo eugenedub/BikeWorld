@@ -1,6 +1,8 @@
 
 public class FirstTest {
-
+    /**
+     * Testen van de werking van constructors
+    */
 	public static void main(String[] args) {
 		System.out.println("waar gaat dit allemaal naartoe?");
 		// Testclasse zonder parameter
