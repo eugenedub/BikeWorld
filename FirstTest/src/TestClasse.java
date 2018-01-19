@@ -1,9 +1,14 @@
 
 public class TestClasse {
-   public static final char[] testFloat = null;
+   float testFloat = 1.5f;
+   int testInteger = 2;
 
-TestClasse() {
-	   int testInteger = 50;
-	   float testFloat = 1.7f;
-}
+
+   TestClasse() {
+	   testFloat = 1.7f;
+    }
+
+    TestClasse(char karakter) {
+       testInteger = 45;
+    }
 }
